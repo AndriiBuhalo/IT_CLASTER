@@ -77,11 +77,17 @@ p 'Ruby'[5]
 name = "Hello Ruby"
 p name[6..9] 
 p name['Ruby']
+p name[/Ruby/]
 
 name = "Ruby is awesome"
 p name [0..3]+ name[7..14]
 p name.clear<<"Ruby awesome" #))
 p name.split[0,3].join(" ") #))
+p name.gsub(/is /, "")
+name [4..6] = ""
+puts name
+name[4] = " "
+puts name
 
 
 p "RUBY".downcase
@@ -106,9 +112,9 @@ p 0.4-0.3 == 0.1 # false відповідь через те що перевід 
 p "hello \#\{ World"
 
 
-p  "hello %.2f How are you?" %f=1 # flove (f)
-p  "hello %.2d How are you?" %d=12 # питання як застосовувати пару матодів sprint f
-p  "hello %s How are you?" %s="bob" %s=2  # (s) string %s=+2 + чомусь все синє якщо забрати (%s=2)
+p  "hello %.2f How are you?" % f=1 # flove (f)
+p  "hello %.2d How are you?" % d=12 # питання як застосовувати пару матодів sprint f
+p  "hello %s How are you?" % s="bob" %s2  # (s) string %s=+2 + чомусь все синє якщо забрати (%s=2) ????????????пш
 
 p  "hello %.2f How are you?" %f=1 # flove (f)
 
@@ -120,4 +126,3 @@ p "\u0024"
 p "\u20ac"
 
 p "\u{A5}"
-
