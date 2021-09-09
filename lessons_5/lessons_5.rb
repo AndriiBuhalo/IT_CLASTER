@@ -200,7 +200,15 @@ def factorial(number)
 end
 a = 5 
  p "factorial #{a}! =" +" " + factorial(a).to_s
-
+    #or
+def factorial(number)
+    if number == 0
+        return 0
+    end
+    a = (1.."#{number}".to_i).to_a.reduce(:*)
+end
+a = 5 
+    p "factorial #{a}! =" + " " + factorial(a).to_s
  puts "------------"
 
  def dont_zero(number)
