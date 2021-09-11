@@ -40,10 +40,12 @@ undef qestion
 
 #6
 def you_are_here?(tell)
-    return true if tell == "+"|| true || "yes" || "Yes" || "YES"
-    return false if tell == "-" || false || "no" || "No" || "NO"
+    yes = ['true', 'yes', 'Yes', 'YES','+',true]
+    no = ['no','true','No','NO','-',false,'false']
+    return true if yes.include?(tell) #yes.each{|x| x == it("").each do|x|
+    return false if no.include?(tell) #tell == "-" || false || "no" || "No" || "NO"
 end
-p you_are_here?(true)
+p you_are_here?("true")
 
 #7
 a = [1,2,3]
@@ -229,13 +231,13 @@ p doubl.call([1,2,3,4])
 
 p "_______________________"
 #4
-#  k = (5..35).to_a
-# def midlle (k)
-#     l = k.reduce(:+) #620
-#    s = k.size   #31
-#     p l/s
-# end
-# midlle(k)
+ k = (5..35).to_a
+def midlle (k)
+    l = k.reduce(:+) #620
+   s = k.size   #31
+    p l/s
+end
+midlle(k)
 
 p "_______________________"
 #5
@@ -258,7 +260,7 @@ def vovels(h)
     count = 0
     leters = ['A','Е','И','І','О','У','Г','U','Y']
     a.split("").each do|x|
-        count += 1 if x == 'A'||'Е'||'И'||'І'||'О'||'У'||'Г'||'U'||'Y'
+        count += 1 if leters.each{|p| p == x} #'A'||'Е'||'И'||'І'||'О'||'У'||'Г'||'U'||'Y'
     end
     # h.each {|x|count += 1 if x == leters }
     p count
@@ -282,4 +284,5 @@ def collect2(h)
     p h.join(",")
 end
 collect2(g)
+
 
