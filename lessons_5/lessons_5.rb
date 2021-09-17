@@ -34,7 +34,7 @@ a = [1,2,3,4,5]
 while a.empty? == false do
     p a
     a.pop
-  end
+end
 p a
 p "----------"
 
@@ -65,17 +65,17 @@ end
 
 b.each {|k,v| print %Q-keys:#{k}- + %Q-value #{v}-}
 
-50.times{|x| p x if x<=20 ||x>=22 && x<= 34 || x>=36}
-50.times do |x| 
-  print x==21|| x==35 ? "" : " #{x},"
+50.times{|p| p p if p<=20 ||p>=22 && p<= 34 || p>=36}
+50.times do |p| 
+  print p==21|| p==35 ? "" : " #{p},"
 end
 
 p "----------"
 
 array = [1,2,3,4]
-p array.map{|x|  x**3}
-p array.collect{|x|  x**3}
-p array.map!{|x|  x**3}
+p array.map{|w| w**3}
+p array.collect{|n|  n**3}
+p array.map!{|s|s**3}
 p array
 
 p "-----------"
@@ -84,32 +84,32 @@ array1= (1..50).to_a
 p array_new.first
 p array1.last
 
-2.upto(7){ |x| print " #{x}."}
+2.upto(7){ |xi| print " #{xi}."}
 puts
 
 p "-----------"
-6.downto(-3){ |x| print " #{x}."}
+6.downto(-3){|xi| print " #{xi}."}
 puts
 p "-----------"
--10.step(10,2){|x| print " #{x}."}
+-10.step(10,2){|o| print " #{o}."}
 puts
 p "-----------"
-1.upto(15){ |x| print " #{x}."}
+1.upto(15){ |o| print " #{o}."}
 puts
 p "-----------"
-16.times do|x|
-    print " #{x}." if x>0
+16.times do|o|
+    print " #{o}." if o>0
 end
 puts"-----------"
 
  p (1..50).reduce(:+)
 
- begin
+begin
     p a = (1..50).reduce()
   rescue => ex
     p ex.message
     p "Something wrong"
-  end
+end
 
   # додаткове завдання)
 
@@ -173,7 +173,7 @@ end
 
  puts "------------"
 
- def new_1
+def new_1
     yield "ruby" if block_given?
     yield "ruby" if block_given?
     yield "ruby" if block_given?
@@ -181,7 +181,7 @@ end
     yield "ruby" if block_given?
 
 end
-new_1{|x| p x}
+new_1{|o| p o}
 new_1
 
 puts "------------"
@@ -199,7 +199,7 @@ def factorial(number)
     a.reduce(:*)
 end
 a = 5 
- p "factorial #{a}! =" +" " + factorial(a).to_s
+ p "factorial #{a}! =" + " " + factorial(a).to_s
     #or
 def factorial(number)
     if number == 0
@@ -207,12 +207,11 @@ def factorial(number)
     end
     a = (1.."#{number}".to_i).to_a.reduce(:*)
 end
-a = 5 
-    p "factorial #{a}! =" + " " + factorial(a).to_s
+o = 5 
+    p "factorial #{o}! =" + " " + factorial(a).to_s
  puts "------------"
 
  def dont_zero(number)
-    x =9
     begin
         a = 100/ number
     rescue

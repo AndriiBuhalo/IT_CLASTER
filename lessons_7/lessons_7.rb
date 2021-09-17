@@ -132,7 +132,7 @@ alf.greeting_off
 class Greeter
     #19
     POVER  = "111111"
-    def initialize(name)
+    def initialize(name = "Kolins")
         @name = name
     end
     def say_hello

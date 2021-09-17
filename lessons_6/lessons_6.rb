@@ -23,7 +23,7 @@ end
 p test_string1("Олежка")
 
 #4
-def array_method (name, age)
+def array_method(name, age)
 ["#{name}" + " Петрович", age]
 end
 a = array_method('Олег',32)
@@ -127,7 +127,7 @@ def iter_lambda(n,k,p,&s)
     i +=1
     end
 
-    end
+end
     iter_lambda(10,5,8){|l| p l}
     p "_______________________"
 
@@ -224,7 +224,7 @@ procs.("hello","world")
 p "_______________________"
 #3
 def multi(n)
-    lambda{|x| x.collect{|x| x*n}}
+    lambda{|x| x.collect{|y| y*n}}
 end
 doubl = multi(3)
 p doubl.call([1,2,3,4])
@@ -232,7 +232,7 @@ p doubl.call([1,2,3,4])
 p "_______________________"
 #4
  k = (5..35).to_a
-def midlle (k)
+def midlle(k)
     l = k.reduce(:+) #620
    s = k.size   #31
     p l/s
@@ -242,7 +242,7 @@ midlle(k)
 p "_______________________"
 #5
 j = "hello"
-def center (j)
+def center(j)
    a =j.split("")
    a.pop
    a.shift
